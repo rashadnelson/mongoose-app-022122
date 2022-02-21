@@ -32,11 +32,11 @@ const config = {
 app.use(auth(config));
 
 app.get('/', (request, response) => {
-    response.send(req.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
+    response.send(request.oidc.isAuthenticated() ? 'Logged in' : 'Logged out');
 });
 
 app.get('/profile', requiresAuth(), (request, response) => {
-    response.send(JSON.stringify(req.oidc.user));
+    response.send(JSON.stringify(request.oidc.user));
 });
 
 
