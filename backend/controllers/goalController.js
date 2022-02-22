@@ -42,7 +42,7 @@ module.exports = {
     
         response.status(200).json(updatedGoal)
 
-        // response.status(200).json({ message: `Update goal ${request.params.id}` })
+        /// response.status(200).json({ message: `Update goal ${request.params.id}` })
         
     },
 
@@ -63,8 +63,6 @@ module.exports = {
     }
     
 }
-
-
     
     
 
